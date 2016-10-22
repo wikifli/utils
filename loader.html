@@ -17,3 +17,12 @@
     }
 </style>
 <div id="loading"><img src="~/Images/loader.gif" /></div>
+<script>
+    //Metodos para mostrar el loading en las llamadas AJAX
+    $(document).ajaxStart(function () {
+                $("#loading").show();
+            });
+    $(document).ajaxStop(function () {
+        $("loading").hide();
+    });
+</script>
